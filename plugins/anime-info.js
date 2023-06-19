@@ -30,7 +30,7 @@ conn.sendButton(m.chat, animeingfo, wm, image_url, [
             ], m)
 }
 handler.help = ['animeinfo <anime>']
-handler.tags = ['anime']
+handler.tags = ['anime', 'limitmenu']
 handler.command = /^(animeinfo)$/i
 handler.limit = true
 export default handler

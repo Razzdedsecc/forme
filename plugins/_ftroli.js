@@ -3,8 +3,7 @@ import fs from 'fs'
 const {
     MessageType,
     Mimetype
-/*} = (await import("@adiwajshing/baileys")).default;*/
-} = (await import('@adiwajshing/baileys')).default
+} = (await import("@adiwajshing/baileys")).default;
  const anu = {
 	key : {
                           participant : '0@s.whatsapp.net'
@@ -25,8 +24,11 @@ const {
 conn.sendMessage(m.chat,{text:wm}, {quoted: anu})
 }
 
-handler.tags = ['nocategory']
+
 handler.help = ['troli']
+
+handler.tags = ['ᴘᴇɴᴅɪɴɢ sᴛᴜғғ']
+
 handler.command = /^troli$/i
 handler.owner = false
 handler.mods = false

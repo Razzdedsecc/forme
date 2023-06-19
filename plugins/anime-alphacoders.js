@@ -4,7 +4,7 @@ let tetete = `https://api.zacros.my.id/search/alphacoders?query=${text}`
 conn.sendButtonImg(m.chat, tetete, `Hasil Dari ${text}`, wm2, 'Thanks', 'thanks', m) 
 }
 handler.help = ['alphacoders'].map(v => v + ' <query>')
-handler.tags = ['anime', 'internet', 'kabul']
+handler.tags = ['anime']
 handler.command = /^(alphacoders)$/i
 
 export default handler 

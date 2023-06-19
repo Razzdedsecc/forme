@@ -1,7 +1,6 @@
 import fetch from "node-fetch"
-/*import { generateWAMessageFromContent } from "@adiwajshing/baileys"
-*/
-let { generateWAMessageFromContent } = (await import('@adiwajshing/baileys')).default
+import { generateWAMessageFromContent } from "@adiwajshing/baileys"
+
 let handler  = async (m, { conn }) => {
 
  let pp = 'https://tinyurl.com/24u64tky'
@@ -13,9 +12,9 @@ let handler  = async (m, { conn }) => {
 let msg = await generateWAMessageFromContent(m.chat, { locationMessage: {
   degreesLatitude: 0,
   degreesLongitude: 0,
-  name: '𝗠𝗨𝗟𝗧𝗜 𝗗𝗘𝗩𝗜𝗖𝗘 𝗕𝗢𝗧',
+  name: '𝚁𝚙𝚐 𝙱𝚘𝚝 𝚆𝚑𝚊𝚝𝚜𝚊𝚙𝚙',
   address: wm,
-  url: 'https://lynk.id/kabul',
+  url: 'https://github.com/ImYanXiao',
   isLive: true,
   accuracyInMeters: 0,
   speedInMps: 0,
@@ -26,8 +25,7 @@ let msg = await generateWAMessageFromContent(m.chat, { locationMessage: {
 
 return conn.relayMessage(m.chat, msg.message, {})
 }
-handler.tags = ['nocategory']
-handler.help = ['loc1']
-handler.command = /^loc1$/i
-handler.owner = false
+
+handler.command = /^loc1$/
+handler.owner = true
 export default handler

@@ -18,7 +18,7 @@ contextInfo: { externalAdReply :{
                         description: 'anu',
                         title: bottime,
                         body: 'Total Cintaku Padamu',          previewType: 0,
-                        thumbnail: pp,
+                        thumbnail: fs.readFileSync("./thumbnail.jpg"),
                         sourceUrl: sig
                       }}
 })

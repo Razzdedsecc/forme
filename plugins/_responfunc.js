@@ -89,7 +89,7 @@ conn.sendFile(m.chat, result.video || result.video_original, "tiktok.mp4", `*Tik
 }
 
 function ucapan() {
-    const time = moment.tz('Asia/Makassar').format('HH')
+    const time = moment.tz('Asia/Karachi').format('HH')
     let res = "Good night 🌙"
     if (time >= 4) {
         res = "Good morning 🌄"

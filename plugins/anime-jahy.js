@@ -1,19 +1,18 @@
 import fetch from 'node-fetch'
 
-let handler = async (m, { conn, text }) => {
-let res = await fetch('https://raw.githubusercontent.com/Xmell91/loli/master/loli.json')
-if (!res.ok) throw await `${res.status} ${res.statusText}`;
-let json = await res.json();
-let url = json[Math.floor(Math.random() * json.length)]
- let kataanimesad = pickRandom(global.kataanine)
+let handler = async (m, { conn, command }) => {
+	let url = 'https://api.xteam.xyz/randomimage/jahy?APIKEY=Apikeymu'
+    let kataanimesad = pickRandom(global.kataanine)
     let cap = `🐦Kataanimesad: ${kataanimesad}\n ${wm}`
-await conn.send2ButtonImg(m.chat, await (await fetch(url)).buffer(), 'Pedo Pedo', cap, 'Menu', '.menu', 'Next', '.loli', m)
+	conn.sendButton(m.chat, 'Wangy wangy (≧ω≦)', cap, await(await fetch(url)).buffer(), [['Menu', '.menuv3',],['Next',`.${command}`,]],m)
 }
-handler.command = /^(loli)$/i
-handler.tags = ['anime']
-handler.help = ['loli']
-handler.limit = true
+handler.command = /^(jahy)$/i
+handler.tags = ['anime', 'premium', 'nsfw']
+handler.help = ['jahy']
+handler.premium = true
+
 export default handler
+
 global.kataanine = [
         "ᴅɪ ᴅᴜɴɪᴀ ꜱᴀɴᴀ, ᴍᴀᴜᴘᴜɴ ᴅɪ ᴅᴜɴɪᴀ ꜱɪɴɪ, ᴍᴇɴᴀɴɢɪꜱ ᴅɪꜱᴀᴀᴛ ꜱᴇᴅɪʜ ɪᴛᴜ ᴛᴀᴋ ᴀᴘᴀ. – ᴋɪʀɪᴛᴏ",
         "ᴀᴋᴜ ᴍᴇɴʏᴜᴋᴀɪᴍᴜ, ʙᴀʜᴋᴀɴ ᴅɪꜱᴀᴀᴛ ᴋᴀᴜ ᴍᴇᴍɪʟɪʜ ᴅɪᴀ, ᴀᴋᴜ ꜱᴀɴɢᴀᴛ ᴛᴇʀʟᴜᴋᴀ ᴅᴀɴ ꜱᴇᴅɪʜ. – ᴛᴏᴜᴍᴀ ᴋᴀᴢᴜꜱᴀ",
@@ -48,5 +47,4 @@ global.kataanine = [
 function pickRandom(list) {
   return list[Math.floor(Math.random() * list.length)]
 }
-
 

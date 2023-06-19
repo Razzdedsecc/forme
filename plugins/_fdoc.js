@@ -9,20 +9,20 @@ const anu = {
            participant : '0@s.whatsapp.net'
                         },
        message: {
-                    "documentMessage": {
-                    "title": 'Ikratos.jpeg', 
-                    "jpegThumbnail": fp
+                    documentMessage: {
+                    title: 'wm', 
+                    jpegThumbnail: './thumbnail.jpg'
                           }
                         }
                       }
-await conn.sendMessage(m.chat,{ text: wm}, { quoted: anu })
+conn.sendMessage(m.chat,{ text: wm}, { quoted: anu })
 }
 
 
 
 handler.help = ['doc']
 
-handler.tags = ['nocategory']
+handler.tags = ['ᴘᴇɴᴅɪɴɢ sᴛᴜғғ']
 
 handler.command = /^doc$/i
 handler.owner = false

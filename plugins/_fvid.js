@@ -3,7 +3,7 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
 const {
     MessageType,
     Mimetype
-} = (await import("@adiwajshing/baileys")).default
+} = (await import("@adiwajshing/baileys")).default;
 const anu = {
 	 key: { 
           fromMe: false,
@@ -24,12 +24,15 @@ conn.sendMessage(m.chat, { text: wm }, { quoted: anu })
 }
 
 
-handler.tags = ['nocategory']
+
 handler.help = ['vid']
+
+handler.tags = ['ᴘᴇɴᴅɪɴɢ sᴛᴜғғ']
+
 handler.command = /^vid$/i
 handler.owner = false
 handler.mods = false
 handler.premium = false
-handler.group = false
+handler.group = true
 
 export default handler
